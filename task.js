@@ -9,10 +9,10 @@ function getArrayParams(arr) {
   const min = arr => arr.reduce((x, y) => Math.min(x, y));
   const max = arr => arr.reduce((x, y) => Math.max(x, y)); 
   const avg = arr => {
-    for (let i = 0; i <= arr.length; i++) {
-    sum += arr[i];
+    for (let position in array) {
+    sum += array[position];
     }
-    setAvg = sum / arr.length;
+    setAvg = sum / array.length;
     return Number(setAvg);
   }
 
