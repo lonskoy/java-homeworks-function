@@ -17,11 +17,11 @@ function worker(arr) {
   return sum;
 }
 
-function makeWork(arr, worker) {
+function makeWork(arr, func) {
   let max = 0;
   let temp = 0;
   for (let i = 0; i < arr.length; i++) {
-    temp += worker(arr[i]);
+    temp += func(arr[i]);
   }
   if (temp > max) {max = temp}
   return max;
