@@ -4,7 +4,7 @@ function getArrayParams(arr) {
   const min = Math.min(...arr);
   const max = Math.max(...arr);
   const avg1 = arr.reduce((acc, item) => acc += item);
-  const avg = Number((avg1 / array.length).toFixed(2));
+  const avg = Number((avg1 / arr.length).toFixed(2));
   return { min: min, max: max, avg: avg };
 }
 
@@ -26,8 +26,7 @@ function makeWork(arr, func) {
   if (temp > max) {max = temp}
   return max;
 }
-
-
+  
 // Задание 3
 function worker2(arr) {
   // Ваш код
