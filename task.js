@@ -12,21 +12,20 @@ function getArrayParams(arr) {
 // Задание 2
 
 function worker(arr) {
-  let sum;
-  sum = arr.reduce((acc, item) => acc += item, 0);
-  return sum;
+  
+  return arr.reduce((acc, item) => acc += item, 0);
+
 }
 
 function makeWork(arr, func) {
   let max = 0;
-  let temp = 0;
   for (let i = 0; i < arr.length; i++) {
-    temp += func(arr[i]);
-  }
-  if (temp > max) {max = temp}
+    func(arr[i]);
+    if (func > max) {max = func}
   return max;
+  }
 }
-  
+
 // Задание 3
 function worker2(arr) {
   // Ваш код
