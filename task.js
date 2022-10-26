@@ -12,21 +12,23 @@ function getArrayParams(arr) {
 // Задание 2
 
 function worker(arr) {
-  
   return arr.reduce((acc, item) => acc += item, 0);
-
 }
 
 function makeWork(arr, func) {
   let max = 0;
   for (let i = 0; i < arr.length; i++) {
-    func(arr[i]);
-    if (func > max) {max = func}
-  return max;
+    const temp = func(arr[i]);
+      if(temp > max) {
+        max = temp;
+      }
   }
+  return max;
 }
 
 // Задание 3
 function worker2(arr) {
-  // Ваш код
+  const min = Math.min(...arr);
+  const max = Math.max(...arr);
+  return Math.abs(max - min);
 }
